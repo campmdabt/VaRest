@@ -1,10 +1,10 @@
 {
 	"FileVersion" : 3,
 	"FriendlyName" : "VaRest",
-	"Version" : 30,
-	"VersionName" : "1.1-r30",
+	"Version" : 32,
+	"VersionName" : "1.1-r32",
 	"CreatedBy" : "Vladimir Alyamkin",
-	"CreatedByURL" : "https://alyamkin.com",
+	"CreatedByURL" : "https://ufna.dev",
 	"EngineVersion" : "4.26.0",
 	"Description" : "Plugin that makes REST (JSON) server communication easy to use",
 	"Category" : "Network",

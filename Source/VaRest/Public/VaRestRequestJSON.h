@@ -4,12 +4,16 @@
 
 #include "Engine/LatentActionManager.h"
 #include "Http.h"
+#include "HttpModule.h"
+#include "Interfaces/IHttpRequest.h"
 #include "LatentActions.h"
 
 #include "VaRestTypes.h"
 
 #include "VaRestRequestJSON.generated.h"
 
+class UVaRestJsonValue;
+class UVaRestJsonObject;
 class UVaRestSettings;
 
 /**
@@ -154,6 +158,10 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "VaRest|Response")
 	void SetResponseObject(UVaRestJsonObject* JsonObject);
 
+	/** Get the Response Json value */
+	UFUNCTION(BlueprintCallable, Category = "VaRest|Response")
+	UVaRestJsonValue* GetResponseValue() const;
+
 	///////////////////////////////////////////////////////////////////////////
 	// Request/response data access
 
@@ -293,6 +301,10 @@ protected:
 	/** Response data stored as JSON */
 	UPROPERTY()
 	UVaRestJsonObject* ResponseJsonObj;
+
+	/** Response data stored as JSON value */
+	UPROPERTY()
+	UVaRestJsonValue* ResponseJsonValue;
 
 	/** Verb for making request (GET,POST,etc) */
 	EVaRestRequestVerb RequestVerb;
